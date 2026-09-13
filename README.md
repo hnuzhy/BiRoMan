@@ -1,10 +1,10 @@
 # BiRoMan
 The codebase for developing modular Bimanual Robotic Manipulation using dual-arm platforms
 
-## ● Platform 1: DualArmAubo
+## ● Platform 1: [DualArmAubo](./DualArmAubo)
 
 
-## ● Platform 2: DualArmRokae
+## ● Platform 2: [DualArmRokae](./DualArmRokae)
 
 
 ## ● Acknowledgement
