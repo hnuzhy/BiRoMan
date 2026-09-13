@@ -15,7 +15,7 @@ The codebase for developing modular Bimanual Robotic Manipulation using dual-arm
 
 
 ## ● Acknowledgement
-
+We acknowledge the providers of various hardware used in this project, including the [Aubo-i5 robotic arm](https://www.aubo-cobot.com/public/i5product3), [Rokae xMate CR7 robotic arm](https://www.rokae.com/en/product/show/545/xMateCR.html), [DH gripper PGI-80-80](https://en.dh-robotics.com/product/pgi), [Jodell Robotics RG75-300](https://www.jodell-robotics.com/product-detail?id=5), and [kingfisher binocular camera](https://docs.dexforce.com/en/PickWiz/V1.8.3/w138l9kf/). 
 
 ## ● Citation
 If you use our code in your research, please cite with:
