@@ -3,8 +3,8 @@ The codebase for developing modular Bimanual Robotic Manipulation using dual-arm
 
 <table>
   <tr>
-    <td align="center" width=56%><img src="./DualArmAubo/dual-arm-aubo.jpg" width=100%></td>
-    <td align="center" width=44%><img src="./DualArmRokae/dual-arm-rokae.jpg" width=100%></td>
+    <td align="center" width=58%><img src="./DualArmAubo/dual-arm-aubo.jpg" width=100%></td>
+    <td align="center" width=42%><img src="./DualArmRokae/dual-arm-rokae.jpg" width=100%></td>
   </tr>
 </table>
 
