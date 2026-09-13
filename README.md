@@ -3,7 +3,7 @@ The codebase for developing modular Bimanual Robotic Manipulation using dual-arm
 
 <table>
   <tr>
-    <center><td><img src="https://github.com/hnuzhy/BiRoMan/blob/main/DualArmAubo/dual-arm-aubo.jpg" width=150%></td></center>
+    <center><td><img src="https://github.com/hnuzhy/BiRoMan/blob/main/DualArmAubo/dual-arm-aubo.jpg" width=180%></td></center>
     <center><td><img src="https://github.com/hnuzhy/BiRoMan/blob/main/DualArmRokae/dual-arm-rokae.jpg" width=80%></td></center>
   </tr>
 </table>
