@@ -12,7 +12,7 @@ The codebase for developing modular Bimanual Robotic Manipulation using dual-arm
 
 ## ● Citation
 If you use our code in your research, please cite with:
-```bash
+```
 % VLBiMan++ (arxiv2026.09)
 @article{zhou2026vlbiman++,
   title={VLBiMan++: Expanding the Generalization Boundary of Vision-Language Anchored One-Shot Bimanual Manipulation},
