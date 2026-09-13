@@ -15,7 +15,8 @@ If you use our code in your research, please cite with:
 ```bash
 % VLBiMan++ (arxiv2026.09)
 @article{zhou2026vlbiman++,
-  title={VLBiMan++: Expanding the Generalization Boundary of Vision-Language Anchored One-Shot Bimanual Manipulation},
+  title={VLBiMan++: Expanding the Generalization Boundary of Vision-Language Anchored
+        One-Shot Bimanual Manipulation},
   author={Zhou, Huayi and Gao, Wei and Han, Yiyang and Jia, Kui and Huang, Hui},
   journal={arXiv preprint arXiv:2609.xxxxx},
   year={2026}
@@ -23,7 +24,8 @@ If you use our code in your research, please cite with:
 
 % VLBiMan (ICLR2026)(arxiv2025.09)
 @inproceedings{zhou2026vlbiman,
-  title={VLBiMan: Vision-Language Anchored One-Shot Demonstration Enables Generalizable Bimanual Robotic Manipulation},
+  title={VLBiMan: Vision-Language Anchored One-Shot Demonstration Enables Generalizable
+        Bimanual Robotic Manipulation},
   author={Zhou, Huayi and Jia, Kui},
   booktitle={International Conference on Learning Representations (ICLR)},
   volume={2026},
