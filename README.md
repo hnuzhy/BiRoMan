@@ -1,7 +1,7 @@
 # BiRoMan
 The codebase for developing modular Bimanual Robotic Manipulation using dual-arm platforms. These platforms have been utilized in our bimanual manipulation projects including [VLBiMan](https://hnuzhy.github.io/projects/VLBiMan), [BiDemoSyn](https://hnuzhy.github.io/projects/BiDemoSyn), and [VLBiMan++](https://hnuzhy.github.io/projects/VLBiManPlus).
 
-⚠︎ These modular solutions or methods are tightly coupled with the hardware platform. You have to build your own robot manipulation system from scratch.
+⚠︎ These modular solutions are tightly coupled with the robotic hardwares. You have to build your own robot manipulation system from scratch.
 
 <table>
   <tr>
