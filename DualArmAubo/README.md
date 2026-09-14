@@ -8,12 +8,21 @@ This is a platform with a contralateral fixed-base dual-arm manipulator, a Kingf
 ## Step 1: Hand-Eye Calibration
 The hand-eye calibration referred to here is the calibration of the 4×4 transformation matrix for an "eye-to-hand" (or "eye-outside-hand") configuration. The primary objective is to transform 6-DoF poses from the head-mounted egocentric camera frame to the robotic arm's coordinate system (and vice versa). For further theoretical explanations, please refer to [arXiv](https://arxiv.org/abs/2311.12655) and [Wikipedia](https://en.wikipedia.org/wiki/Hand%E2%80%93eye_calibration_problem). In practice, we consistently use the left-eye view of the binocular stereo camera as the primary perspective for all calibration procedures. In the dual-arm manipulation platform, each robotic arm requires individual calibration. Additionally, we consistently use a concentric-circle calibration plate. Examples can be found in folders [saved_imgs_eeps_s1_arm1/arm2](./binocularCam/example_kfr/) or in the animated GIF below.
 
+<table>
+  <tr>
+    <td align="center" width=50%><img src="./DualArmAubo/handeye_frames_armL.gif" width=100%></td>
+    <td align="center" width=50%><img src="./DualArmAubo/handeye_frames_armR.gif" width=100%></td>
+  </tr>
+</table>
+
 For the calibration scripts used in this project, please refer to [handeye_Calib_kfr.py](./scripts_kfr/handeye_Calib_kfr.py) and [handeye_Rlia_kfr.py](./scripts_kfr/handeye_Rlia_kfr.py). The former `handeye_Calib_kfr.py` is used to drive the robotic arm to assume 24 diverse poses—creating a variety of cases—and capture keyframes, while the latter `handeye_Rlia_kfr.py` is used to invoke DexForce’s proprietary [rlia](https://huggingface.co/HoyerChou/YOTO/blob/main/wheels/rlia-0.3.4-cp310-cp310-manylinux_2_31_x86_64.whl) library for the quick and convenient calibration of transformation matrices. In the absence of errors, the calibration accuracy (e.g., Reprojection Error) is typically around 0.1 cm or better. 
 
 ## Step 2: One-Shot Demonstration
 We collect one-shot demonstrations via kinesthetic teaching: an operator manually guides both arms through task-critical waypoints, recording the 6-DoF end-effector poses (relative to each robot base frame) and gripper binary states at each pause. Objects are placed in fixed initial configurations (allowing small positional tolerance) to ensure consistency. The recorded waypoints are then executed autonomously by the robot control API, which solves inverse kinematics between consecutive given poses and synchronizes gripper actions (e.g., closing after reaching a pre-grasp pose). During auto-execution, stereo camera observations (10Hz) and dual-arm joint/end-effector states are logged. For the real rollout effect of the one-shot demonstration related to each task, please refer to our projects [VLBiMan](https://hnuzhy.github.io/projects/VLBiMan) or [BiDemoSyn](https://hnuzhy.github.io/projects/BiDemoSyn/). Finally, demonstrations are deconstructed into task-aware blocks to support subsequent adaptive reusing and trajectory synthesis.
 
 We primarily defined and implemented up to ten bimanual tasks on this dual-arm platform: `plugpen`, `inserting`, `unscrew`, `pouring`, `pressing`, `reorient(handover)`, `reorient+unscrew`, `unscrew+pouring`, `tool-use:spoon`, and `tool-use:funnel`. The keyposes or waypoints generated after a single one-shot demonstration of each task are recorded in a `JSON` file. Please refer to the folder [outputs](./outputs/) for details. Regarding the initial pose and placement of the objects to be manipulated for each task, please refer to the folder [seedinit](./seedinit/). Each task may involve multiple target objects or groups of objects. Consequently, more than one `JSON` file might be generated to record the keyposes throughout the manipulation, as variations in size and shape among objects of the same category can influence the movements required for certain adjustable steps. 
+
+<img src="./DualArmAubo/task_assets-aubo.jpg" width=100%>
 
 ## Step 3: Environment Configuration
 Following the initial calibration and demonstration phases, this project requires the configuration and installation of specific Vision-Language Models (VLMs) or Vision Foundation Models (VFMs). Two types of approaches are employed in this platform.
