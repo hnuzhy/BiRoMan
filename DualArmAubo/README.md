@@ -14,8 +14,8 @@ The hand-eye calibration referred to here is the calibration of the 4×4 transfo
     <td align="center" width=50%> Hand-Eye Calibration of Right-Arm </td>
   </tr>
   <tr>
-    <td align="center" width=50%><img src="./DualArmAubo/handeye_frames_armL.gif" width=100%></td>
-    <td align="center" width=50%><img src="./DualArmAubo/handeye_frames_armR.gif" width=100%></td>
+    <td align="center" width=50%><img src="./handeye_frames_armL.gif" width=100%></td>
+    <td align="center" width=50%><img src="./handeye_frames_armR.gif" width=100%></td>
   </tr>
 </table>
 
@@ -26,7 +26,7 @@ We collect one-shot demonstrations via kinesthetic teaching: an operator manuall
 
 We primarily defined and implemented up to ten bimanual tasks on this dual-arm platform: `plugpen`, `inserting`, `unscrew`, `pouring`, `pressing`, `reorient(handover)`, `reorient+unscrew`, `unscrew+pouring`, `tool-use:spoon`, and `tool-use:funnel`. The keyposes or waypoints generated after a single one-shot demonstration of each task are recorded in a `JSON` file. Please refer to the folder [outputs](./outputs/) for details. Regarding the initial pose and placement of the objects to be manipulated for each task, please refer to the folder [seedinit](./seedinit/). Each task may involve multiple target objects or groups of objects. Consequently, more than one `JSON` file might be generated to record the keyposes throughout the manipulation, as variations in size and shape among objects of the same category can influence the movements required for certain adjustable steps. 
 
-<img src="./DualArmAubo/task_assets-aubo.jpg" width=100%>
+<img src="./task_assets-aubo.jpg" width=100%>
 
 ## Step 3: Environment Configuration
 Following the initial calibration and demonstration phases, this project requires the configuration and installation of specific Vision-Language Models (VLMs) or Vision Foundation Models (VFMs). Two types of approaches are employed in this platform.
