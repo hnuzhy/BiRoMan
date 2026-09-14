@@ -1,5 +1,5 @@
 # BiRoMan
-The codebase for developing modular Bimanual Robotic Manipulation using dual-arm platforms. These platforms have been utilized in our bimanual manipulation projects including [VLBiMan](https://hnuzhy.github.io/projects/VLBiMan), [BiDemoSyn](https://hnuzhy.github.io/projects/BiDemoSyn), [VLBiMan++](https://hnuzhy.github.io/projects/VLBiManPlus).
+The codebase for developing modular Bimanual Robotic Manipulation using dual-arm platforms. These platforms have been utilized in our bimanual manipulation projects including [VLBiMan](https://hnuzhy.github.io/projects/VLBiMan), [BiDemoSyn](https://hnuzhy.github.io/projects/BiDemoSyn), and [VLBiMan++](https://hnuzhy.github.io/projects/VLBiManPlus).
 
 <table>
   <tr>
@@ -12,14 +12,16 @@ The codebase for developing modular Bimanual Robotic Manipulation using dual-arm
   </tr>
 </table>
 
+
 ## ● Platform 1: [DualArmAubo](./DualArmAubo)
 
-This is a platform with a contralateral dual-arm manipulator, a Kingfisher R-6000 binocular camera and two DH-Robotics PGI-80-80 parallel grippers.
+**This is a platform with a contralateral fixed-base dual-arm manipulator, a Kingfisher R-6000 binocular camera and two DH-Robotics PGI-80-80 parallel grippers.** Specifically, this manipulation platform comprises a rectangular workspace (110cm×70cm) with two 6-DoF AUBO-i5 collaborative arms (880mm reach) mounted on opposite short edges of the table. This opposing-arm configuration maximizes shared workspace while minimizing self-collision risks, albeit differing from anthropomorphic designs. Each arm is equipped with a gripper (80mm max opening, 50mm effective length), controlled in binary states (open/closed). Tool length compensation accounts for 160mm absolute length of the gripper. The scene perception is provided by a binocular stereo camera (960×540 RGB resolution), mounted 100cm above the table long edge to capture a third-person view of the workspace. The calibrated stereo setup reconstructs high-fidelity 3D point clouds using [IGEV](https://github.com/gangweix/igev) or [FoundationStereo](https://github.com/NVlabs/FoundationStereo), eliminating the need for wrist-mounted cameras while ensuring full task visibility.Consequently, we do not employ eye-in-hand cameras at the robot end-effectors.
 
 
 ## ● Platform 2: [DualArmRokae](./DualArmRokae)
 
-This is a platform with a semi-humanoid dual-arm manipulator, a Kingfisher R-6000 binocular camera and two Jodell Robotics RG75-30 parallel grippers.
+**This is a platform with a semi-humanoid fixed-base dual-arm manipulator, a Kingfisher R-6000 binocular camera and two Jodell Robotics RG75-300 parallel grippers.** This dual-arm robotic platform configured in a popular humanoid style. It consists of two Rokae xMate CR73 6-DoF collaborative arms (988mm reach), each equipped with a gripper with a max opening of 75 mm. A binocular camera is mounted centrally at the head position. An anthropomorphic dual-arm configuration is clearly better aligned with human operational habits, making teaching easier and movements more human-like. However, its drawbacks include an increased overlapping workspace between the arms and restricted reachability for each individual arm. As for the handling of the grippers, the configuration of the binocular cameras, and the point cloud reconstruction methods, they are all similar or identical to those used with the dual-arm Aubo system.
+
 
 ## ● Acknowledgement
 We acknowledge the providers of various hardware used in this project, including the [Aubo-i5 robotic arm](https://www.aubo-cobot.com/public/i5product3), [Rokae xMate CR7 robotic arm](https://www.rokae.com/en/product/show/545/xMateCR.html), [DH gripper PGI-80-80](https://en.dh-robotics.com/product/pgi), [Jodell Robotics RG75-300](https://www.jodell-robotics.com/product-detail?id=5), and [kingfisher binocular camera](https://docs.dexforce.com/en/PickWiz/V1.8.3/w138l9kf/). 
