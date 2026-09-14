@@ -10,6 +10,10 @@ The hand-eye calibration referred to here is the calibration of the 4×4 transfo
 
 <table>
   <tr>
+    <td align="center" width=50%> Hand-Eye Calibration of Left-Arm </td>
+    <td align="center" width=50%> Hand-Eye Calibration of Right-Arm </td>
+  </tr>
+  <tr>
     <td align="center" width=50%><img src="./DualArmAubo/handeye_frames_armL.gif" width=100%></td>
     <td align="center" width=50%><img src="./DualArmAubo/handeye_frames_armR.gif" width=100%></td>
   </tr>
