@@ -14,8 +14,8 @@ The hand-eye calibration referred to here is the calibration of the 4×4 transfo
     <td align="center" width=50%> Hand-Eye Calibration of Right-Arm </td>
   </tr>
   <tr>
-    <td align="center" width=50%><img src="./DualArmRokae/handeye_frames_armL.gif" width=100%></td>
-    <td align="center" width=50%><img src="./DualArmRokae/handeye_frames_armR.gif" width=100%></td>
+    <td align="center" width=50%><img src="./handeye_frames_armL.gif" width=100%></td>
+    <td align="center" width=50%><img src="./handeye_frames_armR.gif" width=100%></td>
   </tr>
 </table>
 
@@ -26,7 +26,7 @@ We collect one-shot demonstrations via kinesthetic teaching: an operator manuall
 
 We primarily defined and implemented six previously bimanual tasks (which are the same as in [DualArmAubo](https://github.com/hnuzhy/BiRoMan/tree/main/DualArmAubo) for **cross-embodiment transferring experiments** and include `plugpen`, `inserting`, `unscrew`, `pouring`, `handover`, and `unscrew+pouring`) and nine newly bimanual tasks on this dual-arm platform: `flatting`, `reorient`, `flipping`, `upright`, `place bottle_mug`, `place fork_spoon`, `zip penbag`, `coil cable`, and `fold towel`. The keyposes or waypoints generated after a single one-shot demonstration of each task are recorded in a config file. Please refer to the file [config.py](./src/config.py) for details. Regarding the initial pose and placement of the objects to be manipulated for each task, please refer to the folder [results](./results/).
 
-<img src="./DualArmAubo/task_assets-rokae.jpg" width=100%>
+<img src="./task_assets-rokae.jpg" width=100%>
 
 ## Step 3: Environment Configuration
 Following the initial calibration and demonstration phases, this project requires the configuration and installation of specific Vision-Language Models (VLMs) or Vision Foundation Models (VFMs). Only one choice is employed in this platform. We choose to leverage the mature and powerful VLM model [Florence-2 (CVPR2024)](https://arxiv.org/abs/2311.06242) and VFM model [SAM2 (ICLR2025)](https://arxiv.org/abs/2408.00714) separately. This enables more robust and precise detection and segmentation of target objects. Regarding usage: although `ultralytics` integrates [SAM2](https://docs.ultralytics.com/zh/models/sam-2), it does not support text prompt inputs. Therefore, I recommend downloading the weights for [Florence-2-base](https://huggingface.co/microsoft/Florence-2-base) and [SAM2-hiera-small](https://huggingface.co/facebook/sam2-hiera-small) yourself, and then using the [scripts](./src/utils/) provided in this project to implement the combined `Florence-2 + SAM2` solution.
