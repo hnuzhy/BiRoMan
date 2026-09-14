@@ -39,5 +39,18 @@ Specifically, we implemented two closed-loop control schemes in scripts [bashRun
 ## Step 5: Perception of Non-Rigid Objects (VLBiMan++)
 Unlike the [DualArmAubo](https://github.com/hnuzhy/BiRoMan/tree/main/DualArmAubo), this platform enables an in-depth analysis of more complex and variable non-rigid objects—specifically, how to achieve effective and controllable visual perception and understanding of them. Concretely, we focus on one type of articulated object (the `penbag` in the `zip penbag` task) and two types of deformable objects (the `linear cable` in the `coil cable` task and the `rectangular towel` in the `fold towel` task). Following the detailed methodology of [VLBiMan++](https://hnuzhy.github.io/projects/VLBiManPlus), we employ a body-part relational representation for the articulated `penbag`, while using boundary-based topological analysis to extract anchor points for the `cable` and `towel`. For implementation details, please refer to the usage functions `RopeSkeletonExtractor` and `find_dense_corners_of_a_deformable_cloth` in [util.py](./src/util.py) as well as the key algorithms [rope_uncross.py](./src/algs/rope_uncross.py) and [slots_v1.py](./src/algs/slots_v1.py). Examples of typical case outcomes are shown in the figure below.
 
-
-
+<img src="./assets/deformable-rect-towel.jpg" width=100%>
+<table>
+  <tr>
+    <td align="center" width=25%> Cable Case 1 </td>
+    <td align="center" width=25%> Cable Case 2 </td>
+    <td align="center" width=25%> Rope Case 1 </td>
+    <td align="center" width=25%> Rope Case 2 </td>
+  </tr>
+  <tr>
+    <td align="center" width=25%><img src="./assets/RopeFlow-cable1-01.gif" width=100%></td>
+    <td align="center" width=25%><img src="./assets/RopeFlow-cable1-02.gif" width=100%></td>
+    <td align="center" width=25%><img src="./assets/RopeFlow-cable2-01.gif" width=100%></td>
+    <td align="center" width=25%><img src="./assets/RopeFlow-cable2-02.gif" width=100%></td>
+  </tr>
+</table>
