@@ -9,8 +9,8 @@ The codebase for developing modular Bimanual Robotic Manipulation using dual-arm
     <td align="center" width=41.5%> Dual-Arm Rokae xMate CR7 </td>
   </tr>
   <tr>
-    <td align="center" width=58.5%><img src="./DualArmAubo/dual-arm-aubo.jpg" width=100%></td>
-    <td align="center" width=41.5%><img src="./DualArmRokae/dual-arm-rokae.jpg" width=100%></td>
+    <td align="center" width=58.5%><img src="./DualArmAubo/assets/dual-arm-aubo.jpg" width=100%></td>
+    <td align="center" width=41.5%><img src="./DualArmRokae/assets/dual-arm-rokae.jpg" width=100%></td>
   </tr>
 </table>
 
