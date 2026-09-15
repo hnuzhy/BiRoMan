@@ -374,10 +374,7 @@ def main():
     # 用户输入自然语言描述
     user_message = input("请输入任务描述: ").strip()
 
-
-# 7q6AlT3Scxhn8XGYTeh4UocJc6Ge4OCp0wAY8huep7ieI3RJYbciJQQJ99BAACYeBjFXJ3w3AAABACOGbVY6
-# bb6f259c-5c3d-4097-92fb-4e033aeb3c9e    
-
+    
     # 调用 LLM 生成任务计划
     if args.scene_id == 0: #pour
         SYS_MESSAGE = SYS_MESSAGE_POURWATER_1
