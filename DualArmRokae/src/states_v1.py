@@ -32,7 +32,7 @@ GEMINI_SYS_MESSAGE = "As you can see, here is a RGB image with a bottle (leftsid
 # https://blog.csdn.net/dafanpai/article/details/148479934
 # pip install google-generativeai
 import google.generativeai as genai
-genai.configure(api_key="AIzaSyA5VkvI8pnwYFz3WkNuhdpSTapQWw95ae4")
+genai.configure(api_key="xxxxxx")
 
 
 #model_gemini = genai.GenerativeModel('gemini-pro')  # for language only
