@@ -35,7 +35,7 @@ If you use our code in your research, please cite with:
 @article{zhou2026vlbiman++,
   title={VLBiMan++: Expanding the Generalization Boundary of Vision-Language Anchored One-Shot Bimanual Manipulation},
   author={Zhou, Huayi and Gao, Wei and Han, Yiyang and Jia, Kui and Huang, Hui},
-  journal={arXiv preprint arXiv:2609.xxxxx},
+  journal={arXiv preprint arXiv:2609.14310},
   year={2026}
 }
 
